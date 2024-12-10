@@ -21,8 +21,3 @@ React Bridging is a multi-strategy router for React bridging the gap from React 
 - [`@react-bridging/cloudflare`](./packages/react-bridging-cloudflare)
 - [`@react-bridging/serve`](./packages/react-bridging-serve)
 - [`@react-bridging/fs-routes`](./packages/react-bridging-fs-routes)
-
-## Previous Versions
-
-- [v6](https://reactbridging.com/v6)
-- [v5](https://v5.reactbridging.com/)

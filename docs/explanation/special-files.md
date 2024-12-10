@@ -320,7 +320,7 @@ console.log(supportsVibrationAPI);
 // client: true | false
 ```
 
-[react-bridging-config]: https://api.reactbridging.com/v7/types/_react_router_dev.config.Config.html
+[react-bridging-config]: https://api.reactbridging.com/v1/types/_react_bridging_dev.config.Config.html
 [route-module]: ../start/framework/route-module
 [routing]: ../start/framework/routing
 [server-entry]: #entryservertsx

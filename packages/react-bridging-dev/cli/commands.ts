@@ -45,7 +45,7 @@ export async function build(
   options: ViteBuildOptions = {}
 ): Promise<void> {
   if (!root) {
-    root = process.env.REACT_ROUTER_ROOT || process.cwd();
+    root = process.env.REACT_BRIDING_ROOT || process.cwd();
   }
 
   let { build } = await import("../vite/build");

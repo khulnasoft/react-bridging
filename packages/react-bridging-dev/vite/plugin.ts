@@ -84,7 +84,7 @@ export async function loadPluginContext({
   root?: string;
 }) {
   if (!root) {
-    root = process.env.REACT_ROUTER_ROOT || process.cwd();
+    root = process.env.REACT_BRIDING_ROOT || process.cwd();
   }
 
   configFile =
@@ -751,7 +751,9 @@ export const reactBridgingVitePlugin: ReactBridgingVitePlugin = () => {
         });
 
         rootDirectory =
-          viteUserConfig.root ?? process.env.REACT_ROUTER_ROOT ?? process.cwd();
+          viteUserConfig.root ??
+          process.env.REACT_BRIDING_ROOT ??
+          process.cwd();
 
         if (viteCommand === "serve") {
           typegenWatcherPromise = Typegen.watch(rootDirectory, {

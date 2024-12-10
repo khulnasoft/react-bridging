@@ -1185,7 +1185,7 @@ async function execCreateReactBridging({
         ...process.env,
         ...env,
         ...(interactive
-          ? { CREATE_REACT_ROUTER_FORCE_INTERACTIVE: "true" }
+          ? { CREATE_REACT_BRIDING_FORCE_INTERACTIVE: "true" }
           : {}),
       },
     }

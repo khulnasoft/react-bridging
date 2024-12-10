@@ -330,17 +330,17 @@ export function shouldRevalidate(
 Next: [Rendering Strategies](./rendering)
 
 [fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-[loader-params]: https://api.reactbridging.com/v7/interfaces/react_router.LoaderFunctionArgs
-[client-loader-params]: https://api.reactbridging.com/v7/types/react_router.ClientLoaderFunctionArgs
-[action-params]: https://api.reactbridging.com/v7/interfaces/react_router.ActionFunctionArgs
-[client-action-params]: https://api.reactbridging.com/v7/types/react_router.ClientActionFunctionArgs
+[loader-params]: https://api.reactbridging.com/v1/interfaces/react_bridging.LoaderFunctionArgs
+[client-loader-params]: https://api.reactbridging.com/v1/types/react_bridging.ClientLoaderFunctionArgs
+[action-params]: https://api.reactbridging.com/v1/interfaces/react_bridging.ActionFunctionArgs
+[client-action-params]: https://api.reactbridging.com/v1/types/react_bridging.ClientActionFunctionArgs
 [error-boundaries]: https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary
-[use-route-error]: https://api.reactbridging.com/v7/functions/react_router.useRouteError
-[is-route-error-response]: https://api.reactbridging.com/v7/functions/react_router.isRouteErrorResponse
+[use-route-error]: https://api.reactbridging.com/v1/functions/react_bridging.useRouteError
+[is-route-error-response]: https://api.reactbridging.com/v1/functions/react_bridging.isRouteErrorResponse
 [cache-control-header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
 [headers]: https://developer.mozilla.org/en-US/docs/Web/API/Response
-[use-matches]: https://api.reactbridging.com/v7/functions/react_router.useMatches
+[use-matches]: https://api.reactbridging.com/v1/functions/react_bridging.useMatches
 [link-element]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
 [meta-element]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-[meta-params]: https://api.reactbridging.com/v7/interfaces/react_router.MetaArgs
-[use-revalidator]: https://api.reactbridging.com/v7/functions/react_router.useRevalidator.html
+[meta-params]: https://api.reactbridging.com/v1/interfaces/react_bridging.MetaArgs
+[use-revalidator]: https://api.reactbridging.com/v1/functions/react_bridging.useRevalidator.html
