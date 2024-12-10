@@ -4,7 +4,7 @@
   "description": "Create a new React Bridging app",
   "homepage": "https://reactbridging.khulnasoft.com",
   "bugs": {
-    "url": "https://github.com/remix-run/remix/issues"
+    "url": "https://github.com/khulnasoft/khulnasoft/issues"
   },
   "repository": {
     "type": "git",

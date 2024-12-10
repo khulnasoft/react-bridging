@@ -74,8 +74,8 @@ jobs:
       - name: ⤴️ Update version
         if: steps.version.outputs.NEXT_VERSION
         run: |
-          git config --local user.email "hello@remix.run"
-          git config --local user.name "Remix Run Bot"
+          git config --local user.email "hello@khulnasoft.com"
+          git config --local user.name "KhulnaSoft Bot"
           git checkout -b nightly/${{ steps.version.outputs.NEXT_VERSION }}
           pnpm run version ${{steps.version.outputs.NEXT_VERSION}}
           git push origin --tags

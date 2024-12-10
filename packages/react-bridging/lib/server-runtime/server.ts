@@ -274,23 +274,23 @@ async function handleSingleFetchRequest(
   let { result, headers, status } =
     request.method !== "GET"
       ? await singleFetchAction(
-          build,
-          serverMode,
-          staticHandler,
-          request,
-          handlerUrl,
-          loadContext,
-          handleError
-        )
+        build,
+        serverMode,
+        staticHandler,
+        request,
+        handlerUrl,
+        loadContext,
+        handleError
+      )
       : await singleFetchLoaders(
-          build,
-          serverMode,
-          staticHandler,
-          request,
-          handlerUrl,
-          loadContext,
-          handleError
-        );
+        build,
+        serverMode,
+        staticHandler,
+        request,
+        handlerUrl,
+        loadContext,
+        handleError
+      );
 
   // Mark all successful responses with a header so we can identify in-flight
   // network errors that are missing this header
@@ -304,7 +304,7 @@ async function handleSingleFetchRequest(
 
   // We use a less-descriptive `text/x-script` here instead of something like
   // `text/x-turbo` to enable compression when deployed via Cloudflare.  See:
-  //  - https://github.com/remix-run/remix/issues/9884
+  //  - https://github.com/khulnasoft/khulnasoft/issues/9884
   //  - https://developers.cloudflare.com/speed/optimization/content/brotli/content-compression/
   resultHeaders.set("Content-Type", "text/x-script");
 

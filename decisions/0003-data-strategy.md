@@ -415,6 +415,6 @@ If users returned normal Response's it would be fine, since we could decode the 
 
 This means that if you just call resolve with no `handlerOverride` you never need to know about `HandlerResult`. If you do pass a `handlerOverride`, then you need to return a proper HandlerResult with `type:"data"|"error"`.
 
-[single-fetch-issue]: https://github.com/remix-run/remix/issues/7641
-[single-fetch-rfc]: https://github.com/remix-run/remix/discussions/7640
-[responsibilities-comment]: https://github.com/remix-run/remix/issues/7641#issuecomment-1836635069
+[single-fetch-issue]: https://github.com/khulnasoft/khulnasoft/issues/7641
+[single-fetch-rfc]: https://github.com/khulnasoft/khulnasoft/discussions/7640
+[responsibilities-comment]: https://github.com/khulnasoft/khulnasoft/issues/7641#issuecomment-1836635069

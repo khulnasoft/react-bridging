@@ -70,7 +70,7 @@ describe("ssr", () => {
               let promise = new Promise((_, r) =>
                 setTimeout(() => r("broken!"), 10)
               );
-              promise.catch(() => {});
+              promise.catch(() => { });
               return {
                 critical: "loader",
                 lazy: promise,
@@ -134,7 +134,7 @@ describe("ssr", () => {
     "https://remix.run/blog",
     "//remix.run/blog",
     "app://whatever",
-    "mailto:hello@remix.run",
+    "mailto:hello@khulnasoft.com",
     "web+remix:whatever",
   ];
 
@@ -790,7 +790,7 @@ describe("ssr", () => {
             "Method Not Allowed",
             new Error(
               'You made a POST request to "/" but did not provide an `action` ' +
-                'for route "root", so there is no way to handle the request.'
+              'for route "root", so there is no way to handle the request.'
             ),
             true
           ),
@@ -2195,7 +2195,7 @@ describe("ssr", () => {
           expect(data.error).toEqual(
             new Error(
               'You made a GET request to "/" but did not provide a `loader` ' +
-                'for route "root", so there is no way to handle the request.'
+              'for route "root", so there is no way to handle the request.'
             )
           );
           expect(data.internal).toBe(true);
@@ -2212,7 +2212,7 @@ describe("ssr", () => {
           expect(data.error).toEqual(
             new Error(
               'You made a POST request to "/" but did not provide an `action` ' +
-                'for route "root", so there is no way to handle the request.'
+              'for route "root", so there is no way to handle the request.'
             )
           );
           expect(data.internal).toBe(true);

@@ -193,7 +193,7 @@ In addition to `<ScrollRestoration>` handling "restoring" scroll position on pre
 
 ### `useRevalidator()` hook
 
-This has been a long time coming - see https://github.com/remix-run/remix/discussions/1996 🙂
+This has been a long time coming - see https://github.com/khulnasoft/khulnasoft/discussions/1996 🙂
 
 ### No distinction between Error and Catch boundaries
 

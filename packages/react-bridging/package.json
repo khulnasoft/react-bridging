@@ -16,7 +16,7 @@
     "directory": "packages/react-bridging"
   },
   "license": "MIT",
-  "author": "Remix Software <hello@remix.run>",
+  "author": "KhulnaSoft <hello@khulnasoft.com>",
   "sideEffects": false,
   "types": "./dist/development/index.d.ts",
   "main": "./dist/development/index.js",

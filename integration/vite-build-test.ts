@@ -246,7 +246,7 @@ test.beforeAll(async () => {
   expect(
     stderr
       .toString()
-      // This can be removed when this issue is fixed: https://github.com/remix-run/remix/issues/9055
+      // This can be removed when this issue is fixed: https://github.com/khulnasoft/khulnasoft/issues/9055
       .replace('Generated an empty chunk: "resource".', "")
       .trim()
   ).toBeFalsy();

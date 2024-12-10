@@ -64,7 +64,7 @@ test.describe(async () => {
       "utf-8"
     );
 
-    // client is not notified of new route addition (https://github.com/remix-run/remix/issues/7894)
+    // client is not notified of new route addition (https://github.com/khulnasoft/khulnasoft/issues/7894)
     // however server can handle new route
     await expect
       .poll(async () => {
