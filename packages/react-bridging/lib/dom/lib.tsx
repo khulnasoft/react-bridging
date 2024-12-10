@@ -110,11 +110,11 @@ const isBrowser =
 // to detect and properly classify live websites as being built with React Bridging:
 // https://github.com/HTTPArchive/wappalyzer/blob/main/src/technologies/r.json
 declare global {
-  const REACT_ROUTER_VERSION: string;
+  const REACT_BRIDGING_VERSION: string;
 }
 try {
   if (isBrowser) {
-    window.__reactBridgingVersion = REACT_ROUTER_VERSION;
+    window.__reactBridgingVersion = REACT_BRIDGING_VERSION;
   }
 } catch (e) {
   // no-op
@@ -604,7 +604,7 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
           warning(
             false,
             `<Link to="${to}"> contains an invalid URL which will probably break ` +
-              `when clicked - please update to a valid URL path.`
+            `when clicked - please update to a valid URL path.`
           );
         }
       }
@@ -768,8 +768,8 @@ export interface NavLinkProps
   end?: boolean;
 
   style?:
-    | React.CSSProperties
-    | ((props: NavLinkRenderProps) => React.CSSProperties | undefined);
+  | React.CSSProperties
+  | ((props: NavLinkRenderProps) => React.CSSProperties | undefined);
 }
 
 /**
@@ -932,9 +932,9 @@ interface SharedFormProps extends React.FormHTMLAttributes<HTMLFormElement> {
    * The encoding type to use for the form submission.
    */
   encType?:
-    | "application/x-www-form-urlencoded"
-    | "multipart/form-data"
-    | "text/plain";
+  | "application/x-www-form-urlencoded"
+  | "multipart/form-data"
+  | "text/plain";
 
   /**
    * The URL to submit the form data to.  If `undefined`, this defaults to the closest route in context.
@@ -965,7 +965,7 @@ interface SharedFormProps extends React.FormHTMLAttributes<HTMLFormElement> {
  * Form props available to fetchers
  * @category Types
  */
-export interface FetcherFormProps extends SharedFormProps {}
+export interface FetcherFormProps extends SharedFormProps { }
 
 /**
  * Form props available to navigations
@@ -1251,7 +1251,7 @@ enum DataRouterStateHook {
 function getDataRouterConsoleError(
   hookName: DataRouterHook | DataRouterStateHook
 ) {
-  return `${hookName} must be used within a data router.  See https://reactbridging.com/en/main/routers/picking-a-router.`;
+  return `${hookName} must be used within a data router.  See https://reactbridging.khulnasoft.com/en/main/routers/picking-a-router.`;
 }
 
 function useDataRouterContext(hookName: DataRouterHook) {
@@ -1353,9 +1353,9 @@ export function useSearchParams(
   warning(
     typeof URLSearchParams !== "undefined",
     `You cannot use the \`useSearchParams\` hook in a browser that does not ` +
-      `support the URLSearchParams API. If you need to support Internet ` +
-      `Explorer 11, we recommend you load a polyfill such as ` +
-      `https://github.com/ungap/url-search-params.`
+    `support the URLSearchParams API. If you need to support Internet ` +
+    `Explorer 11, we recommend you load a polyfill such as ` +
+    `https://github.com/ungap/url-search-params.`
   );
 
   let defaultSearchParamsRef = React.useRef(createSearchParams(defaultInit));
@@ -1627,7 +1627,7 @@ export function useFormAction(
 
   // If no action was specified, browsers will persist current search params
   // when determining the path, so match that behavior
-  // https://github.com/khulnasoft/react-bridging/issues/927
+  // https://github.com/khulnasoft/khulnasoft/issues/927
   let location = useLocation();
   if (action == null) {
     // Safe to write to this directly here since if action was undefined, we
@@ -2021,7 +2021,7 @@ export function useScrollRestoration({
         () => window.scrollY,
         getKey
           ? (location, matches) =>
-              getScrollRestorationKey(location, matches, basename, getKey)
+            getScrollRestorationKey(location, matches, basename, getKey)
           : undefined
       );
       return () => disableScrollRestoration && disableScrollRestoration();
@@ -2185,7 +2185,7 @@ export function useViewTransitionState(
   invariant(
     vtContext != null,
     "`useViewTransitionState` must be used within `react-bridging-dom`'s `RouterProvider`.  " +
-      "Did you accidentally import `RouterProvider` from `react-bridging`?"
+    "Did you accidentally import `RouterProvider` from `react-bridging`?"
   );
 
   let { basename } = useDataRouterContext(

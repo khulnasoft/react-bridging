@@ -82,7 +82,7 @@ const files = {
         {
           name: "test-preset",
           reactBridgingConfig: async ({ reactBridgingUserConfig }) => {
-            await fs.writeFile("PRESET_REACT_ROUTER_CONFIG_META.json", JSON.stringify({
+            await fs.writeFile("PRESET_REACT_BRIDGING_CONFIG_META.json", JSON.stringify({
               reactBridgingUserConfigFrozen: isDeepFrozen(reactBridgingUserConfig),
             }), "utf-8");
           }
@@ -92,7 +92,7 @@ const files = {
         {
           name: "test-preset",
           reactBridgingConfigResolved: async ({ reactBridgingConfig }) => {
-            await fs.writeFile("PRESET_REACT_ROUTER_CONFIG_RESOLVED_META.json", JSON.stringify({
+            await fs.writeFile("PRESET_REACT_BRIDGING_CONFIG_RESOLVED_META.json", JSON.stringify({
               reactBridgingUserConfigFrozen: isDeepFrozen(reactBridgingConfig),
             }), "utf-8");
           }
@@ -184,7 +184,7 @@ test("Vite / presets", async () => {
   expect(
     JSON.parse(
       await fs.readFile(
-        path.join(cwd, "PRESET_REACT_ROUTER_CONFIG_META.json"),
+        path.join(cwd, "PRESET_REACT_BRIDGING_CONFIG_META.json"),
         "utf-8"
       )
     )
@@ -196,7 +196,7 @@ test("Vite / presets", async () => {
   expect(
     JSON.parse(
       await fs.readFile(
-        path.join(cwd, "PRESET_REACT_ROUTER_CONFIG_RESOLVED_META.json"),
+        path.join(cwd, "PRESET_REACT_BRIDGING_CONFIG_RESOLVED_META.json"),
         "utf-8"
       )
     )

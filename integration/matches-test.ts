@@ -181,7 +181,7 @@ test.describe("useMatches", () => {
 >`);
   });
 
-  test("memoizes matches from react router", async ({ page }) => {
+  test("memoizes matches from react bridging", async ({ page }) => {
     let app = new PlaywrightFixture(appFixture, page);
     await app.goto("/count");
     await page.waitForSelector("#matches-count-child");

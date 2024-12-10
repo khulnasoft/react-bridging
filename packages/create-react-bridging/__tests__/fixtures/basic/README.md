@@ -1,6 +1,6 @@
 # Welcome to React Bridging!
 
-- 📖 [React Bridging docs](https://reactbridging.com/dev)
+- 📖 [React Bridging docs](https://reactbridging.khulnasoft.com/dev)
 
 ## Development
 

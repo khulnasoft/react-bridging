@@ -134,4 +134,4 @@ function Task({ task }) {
 
 Next: [Testing](./testing)
 
-[use_fetcher]: https://api.reactbridging.com/v7/functions/react_router.useFetcher.html
+[use_fetcher]: https://api.reactbridging.khulnasoft.com/v7/functions/react_bridging.useFetcher.html

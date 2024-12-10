@@ -28,7 +28,7 @@ describe("navigate with params", () => {
         let navigate = useNavigate();
 
         React.useEffect(() => {
-          navigate("/blog/react router");
+          navigate("/blog/react bridging");
         });
 
         return null;
@@ -50,8 +50,8 @@ describe("navigate with params", () => {
         );
       });
 
-      expect(window.location.pathname).toEqual("/blog/react%20router");
-      expect(node.innerHTML).toMatch(/react router/);
+      expect(window.location.pathname).toEqual("/blog/react%20bridging");
+      expect(node.innerHTML).toMatch(/react bridging/);
     });
   });
 
@@ -61,7 +61,7 @@ describe("navigate with params", () => {
         let navigate = useNavigate();
 
         React.useEffect(() => {
-          navigate("/blog/react+router");
+          navigate("/blog/react+bridging");
         });
 
         return null;
@@ -87,10 +87,10 @@ describe("navigate with params", () => {
       // the + in the URL pathname. Should probably report this as a
       // bug in JSDom...
       let pathname = window.location.pathname.replace(/%20/g, "+");
-      expect(pathname).toEqual("/blog/react+router");
+      expect(pathname).toEqual("/blog/react+bridging");
 
       // Note decodeURIComponent doesn't decode +
-      expect(node.innerHTML).toMatch(/react\+router/);
+      expect(node.innerHTML).toMatch(/react\+bridging/);
     });
   });
 });

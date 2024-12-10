@@ -151,9 +151,9 @@ async function getContext(argv: string[]): Promise<Context> {
     noMotion,
     pkgManager: validatePackageManager(
       pkgManager ??
-        // npm, pnpm, Yarn, and Bun set the user agent environment variable that can be used
-        // to determine which package manager ran the command.
-        (process.env.npm_config_user_agent ?? "npm").split("/")[0]
+      // npm, pnpm, Yarn, and Bun set the user agent environment variable that can be used
+      // to determine which package manager ran the command.
+      (process.env.npm_config_user_agent ?? "npm").split("/")[0]
     ),
     projectName,
     prompt,
@@ -279,8 +279,8 @@ async function copyTemplateToTempDirStep(ctx: Context) {
             err instanceof CopyTemplateError
               ? err.message
               : "Something went wrong. Run `create-react-bridging --debug` to see more info.\n\n" +
-                  "Open an issue to report the problem at " +
-                  "https://github.com/khulnasoft/react-bridging/issues/new"
+              "Open an issue to report the problem at " +
+              "https://github.com/khulnasoft/react-bridging/issues/new"
           );
           throw err;
         },
@@ -328,9 +328,9 @@ async function copyTempDirToAppDirStep(ctx: Context) {
       error(
         "Oh no!",
         `Destination directory contains files that would be overwritten\n` +
-          `         and no \`--overwrite\` flag was included in a non-interactive\n` +
-          `         environment. The following files would be overwritten:` +
-          getFileList("           ")
+        `         and no \`--overwrite\` flag was included in a non-interactive\n` +
+        `         environment. The following files would be overwritten:` +
+        getFileList("           ")
       );
       throw new Error(
         "File collisions detected in a non-interactive environment"
@@ -509,7 +509,7 @@ async function doneStep(ctx: Context) {
   );
   await sleep(100);
   log(
-    `\n${prefix}Join the community at ${color.cyan(`https://rmx.as/discord`)}\n`
+    `\n${prefix}Join the community at ${color.cyan(`https://discord.khulnasoft.com`)}\n`
   );
   await sleep(200);
 }
@@ -556,7 +556,7 @@ async function updatePackageJSON(ctx: Context) {
     error(
       "Oh no!",
       "The provided template must be a React Bridging project with a `package.json` " +
-        `file, but that file does not exist in ${color.bold(relativePath)}.`
+      `file, but that file does not exist in ${color.bold(relativePath)}.`
     );
     throw new Error(`package.json does not exist in ${ctx.cwd}`);
   }
@@ -572,7 +572,7 @@ async function updatePackageJSON(ctx: Context) {
     error(
       "Oh no!",
       "The provided template must be a React Bridging project with a `package.json` " +
-        `file, but that file is invalid.`
+      `file, but that file is invalid.`
     );
     throw err;
   }
@@ -585,7 +585,7 @@ async function updatePackageJSON(ctx: Context) {
       error(
         "Oh no!",
         "The provided template must be a React Bridging project with a `package.json` " +
-          `file, but its ${pkgKey} value is invalid.`
+        `file, but its ${pkgKey} value is invalid.`
       );
       throw new Error(`package.json ${pkgKey} are invalid`);
     }
@@ -600,7 +600,7 @@ async function updatePackageJSON(ctx: Context) {
       ) {
         dependencies[dependency] = semver.prerelease(ctx.reactBridgingVersion)
           ? // Templates created from prereleases should pin to a specific version
-            ctx.reactBridgingVersion
+          ctx.reactBridgingVersion
           : "^" + ctx.reactBridgingVersion;
       }
     }
@@ -670,20 +670,20 @@ React Bridging projects are created from templates. A template can be:
 - a file path to a directory of files
 - a file path to a tarball
 ${[
-  "khulnasoft/react-bridging/templates/basic",
-  "khulnasoft/react-bridging/examples/basic",
-  ":username/:repo",
-  ":username/:repo/:directory",
-  "https://github.com/:username/:repo",
-  "https://github.com/:username/:repo/tree/:branch",
-  "https://github.com/:username/:repo/tree/:branch/:directory",
-  "https://github.com/:username/:repo/archive/refs/tags/:tag.tar.gz",
-  "https://example.com/template.tar.gz",
-  "./path/to/template",
-  "./path/to/template.tar.gz",
-].reduce((str, example) => {
-  return `${str}\n${color.dim("$")} ${color.greenBright("create-react-bridging")} my-app ${color.arg(`--template ${example}`)}`;
-}, "")}
+      "khulnasoft/react-bridging/templates/basic",
+      "khulnasoft/react-bridging/examples/basic",
+      ":username/:repo",
+      ":username/:repo/:directory",
+      "https://github.com/:username/:repo",
+      "https://github.com/:username/:repo/tree/:branch",
+      "https://github.com/:username/:repo/tree/:branch/:directory",
+      "https://github.com/:username/:repo/archive/refs/tags/:tag.tar.gz",
+      "https://example.com/template.tar.gz",
+      "./path/to/template",
+      "./path/to/template.tar.gz",
+    ].reduce((str, example) => {
+      return `${str}\n${color.dim("$")} ${color.greenBright("create-react-bridging")} my-app ${color.arg(`--template ${example}`)}`;
+    }, "")}
 
 To create a new project from a template in a private GitHub repo,
 pass the \`token\` flag with a personal access token with access

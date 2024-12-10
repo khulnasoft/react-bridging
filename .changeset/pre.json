@@ -1,0 +1,24 @@
+{
+  "mode": "pre",
+  "tag": "pre",
+  "initialVersions": {
+    "integration": "0.0.0",
+    "integration-vite-cloudflare-template": "0.0.0",
+    "integration-vite-template": "0.0.0",
+    "create-react-bridging": "3.0.0",
+    "react-bridging": "3.0.0",
+    "@react-bridging/architect": "3.0.0",
+    "@react-bridging/cloudflare": "3.0.0",
+    "@react-bridging/dev": "3.0.0",
+    "react-bridging-dom": "3.0.0",
+    "@react-bridging/express": "3.0.0",
+    "@react-bridging/fs-routes": "3.0.0",
+    "@react-bridging/node": "3.0.0",
+    "@react-bridging/remix-routes-option-adapter": "3.0.0",
+    "@react-bridging/serve": "3.0.0",
+    "@playground/framework": "0.0.0",
+    "@playground/framework-express": "0.0.0",
+    "@playground/framework-spa": "0.0.0"
+  },
+  "changesets": []
+}

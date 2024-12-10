@@ -17,17 +17,17 @@ export default function handleRequest(
 ) {
   return isbot(request.headers.get("user-agent") || "")
     ? handleBotRequest(
-        request,
-        responseStatusCode,
-        responseHeaders,
-        reactBridgingContext
-      )
+      request,
+      responseStatusCode,
+      responseHeaders,
+      reactBridgingContext
+    )
     : handleBrowserRequest(
-        request,
-        responseStatusCode,
-        responseHeaders,
-        reactBridgingContext
-      );
+      request,
+      responseStatusCode,
+      responseHeaders,
+      reactBridgingContext
+    );
 }
 
 function handleBotRequest(

@@ -6,7 +6,7 @@ title: Framework Adoption from RouterProvider
 
 If you are not using `<RouterProvider>` please see [Framework Adoption from Component Routes][upgrade-component-routes] instead.
 
-The React Bridging Vite plugin adds framework features to React Bridging. This guide will help you adopt the plugin in your app. If you run into any issues, please reach out for help on [Twitter](https://x.com/remix_run) or [Discord](https://rmx.as/discord).
+The React Bridging Vite plugin adds framework features to React Bridging. This guide will help you adopt the plugin in your app. If you run into any issues, please reach out for help on [Twitter](https://x.com/remix_run) or [Discord](https://discord.khulnasoft.com).
 
 ## Features
 

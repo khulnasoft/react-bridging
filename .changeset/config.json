@@ -1,0 +1,38 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "khulnasoft/react-bridging"
+    }
+  ],
+  "commit": false,
+  "fixed": [
+    [
+      "create-react-bridging",
+      "react-bridging",
+      "react-bridging-dom",
+      "@react-bridging/architect",
+      "@react-bridging/cloudflare",
+      "@react-bridging/dev",
+      "@react-bridging/fs-routes",
+      "@react-bridging/express",
+      "@react-bridging/node",
+      "@react-bridging/remix-routes-option-adapter",
+      "@react-bridging/serve"
+    ]
+  ],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "dev",
+  "updateInternalDependencies": "patch",
+  "bumpVersionsWithWorkspaceProtocolOnly": true,
+  "ignore": [
+    "integration",
+    "integration-*",
+    "@playground/*"
+  ],
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  }
+}
