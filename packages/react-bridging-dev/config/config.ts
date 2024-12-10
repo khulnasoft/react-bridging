@@ -584,7 +584,12 @@ export async function createConfigLoader({
 
         fsWatcher.on("all", async (...args: ChokidarEmitArgs) => {
           let [event, rawFilepath] = args;
-          let filepath = path.normalize(rawFilepath);
+          // Ensure filepath is a string by checking args[1] type
+          let filepath = path.normalize(
+            typeof rawFilepath === "string"
+              ? rawFilepath
+              : rawFilepath.toString()
+          );
 
           let appFileAddedOrRemoved =
             appDirectory &&

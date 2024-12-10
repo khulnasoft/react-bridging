@@ -203,7 +203,7 @@ importers:
         specifier: ^0.26.11
         version: 0.26.11(typescript@5.7.2)
       typescript:
-        specifier: ^5.4.5
+        specifier: ^5.1.6
         version: 5.7.2
       undici:
         specifier: ^6.10.1
