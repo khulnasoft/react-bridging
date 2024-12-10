@@ -110,11 +110,11 @@ const isBrowser =
 // to detect and properly classify live websites as being built with React Bridging:
 // https://github.com/HTTPArchive/wappalyzer/blob/main/src/technologies/r.json
 declare global {
-  const REACT_BRIDING_VERSION: string;
+  const REACT_BRIDGING_VERSION: string;
 }
 try {
   if (isBrowser) {
-    window.__reactBridgingVersion = REACT_BRIDING_VERSION;
+    window.__reactBridgingVersion = REACT_BRIDGING_VERSION;
   }
 } catch (e) {
   // no-op
@@ -1251,7 +1251,7 @@ enum DataRouterStateHook {
 function getDataRouterConsoleError(
   hookName: DataRouterHook | DataRouterStateHook
 ) {
-  return `${hookName} must be used within a data router.  See https://reactbridging.com/en/main/routers/picking-a-router.`;
+  return `${hookName} must be used within a data router.  See https://reactbridging.khulnasoft.com/en/main/routers/picking-a-router.`;
 }
 
 function useDataRouterContext(hookName: DataRouterHook) {
@@ -1627,7 +1627,7 @@ export function useFormAction(
 
   // If no action was specified, browsers will persist current search params
   // when determining the path, so match that behavior
-  // https://github.com/khulnasoft/react-bridging/issues/927
+  // https://github.com/remix-run/remix/issues/927
   let location = useLocation();
   if (action == null) {
     // Safe to write to this directly here since if action was undefined, we

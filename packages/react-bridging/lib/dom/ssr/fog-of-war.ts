@@ -35,10 +35,10 @@ export function getPartialManifest(
   router: DataRouter
 ) {
   // Start with our matches for this pathname
-  const routeIds = new Set(router.state.matches.map((m) => m.route.id));
+  let routeIds = new Set(router.state.matches.map((m) => m.route.id));
 
-  const segments = router.state.location.pathname.split("/").filter(Boolean);
-  const paths: string[] = ["/"];
+  let segments = router.state.location.pathname.split("/").filter(Boolean);
+  let paths: string[] = ["/"];
 
   // We've already matched to the last segment
   segments.pop();
@@ -51,13 +51,13 @@ export function getPartialManifest(
   }
 
   paths.forEach((path) => {
-    const matches = matchRoutes(router.routes, path, router.basename);
-    if (matches && matches.length > 0) {
+    let matches = matchRoutes(router.routes, path, router.basename);
+    if (matches) {
       matches.forEach((m) => routeIds.add(m.route.id));
     }
   });
 
-  const initialRoutes = [...routeIds].reduce(
+  let initialRoutes = [...routeIds].reduce(
     (acc, id) => Object.assign(acc, { [id]: manifest.routes[id] }),
     {}
   );
@@ -109,14 +109,14 @@ export function useFogOFWarDiscovery(
 
     // Register a link href for patching
     function registerElement(el: Element) {
-      const path =
+      let path =
         el.tagName === "FORM"
           ? el.getAttribute("action")
           : el.getAttribute("href");
       if (!path) {
         return;
       }
-      const url = new URL(path, window.location.origin);
+      let url = new URL(path, window.location.origin);
       if (!discoveredPaths.has(url.pathname)) {
         nextPaths.add(url.pathname);
       }
@@ -124,7 +124,7 @@ export function useFogOFWarDiscovery(
 
     // Register and fetch patches for all initially-rendered links/forms
     async function fetchPatches() {
-      const lazyPaths = Array.from(nextPaths.keys()).filter((path) => {
+      let lazyPaths = Array.from(nextPaths.keys()).filter((path) => {
         if (discoveredPaths.has(path)) {
           nextPaths.delete(path);
           return false;
@@ -158,14 +158,14 @@ export function useFogOFWarDiscovery(
     fetchPatches();
 
     // Setup a MutationObserver to fetch all subsequently rendered links/form
-    const debouncedFetchPatches = debounce(fetchPatches, 100);
+    let debouncedFetchPatches = debounce(fetchPatches, 100);
 
     function isElement(node: Node): node is Element {
       return node.nodeType === Node.ELEMENT_NODE;
     }
 
-    const observer = new MutationObserver((records) => {
-      const elements = new Set<Element>();
+    let observer = new MutationObserver((records) => {
+      let elements = new Set<Element>();
       records.forEach((r) => {
         [r.target, ...r.addedNodes].forEach((node) => {
           if (!isElement(node)) return;
@@ -207,10 +207,11 @@ export async function fetchAndApplyManifestPatches(
   basename: string | undefined,
   patchRoutes: DataRouter["patchRoutes"]
 ): Promise<void> {
-  const manifestPath = `${
-    basename != null ? basename : "/"
-  }/__manifest`.replace(/\/+/g, "/");
-  const url = new URL(manifestPath, window.location.origin);
+  let manifestPath = `${basename != null ? basename : "/"}/__manifest`.replace(
+    /\/+/g,
+    "/"
+  );
+  let url = new URL(manifestPath, window.location.origin);
   paths.sort().forEach((path) => url.searchParams.append("p", path));
   url.searchParams.set("version", manifest.version);
 
@@ -222,7 +223,7 @@ export async function fetchAndApplyManifestPatches(
     return;
   }
 
-  const res = await fetch(url);
+  let res = await fetch(url);
 
   if (!res.ok) {
     throw new Error(`${res.status} ${res.statusText}`);
@@ -230,11 +231,11 @@ export async function fetchAndApplyManifestPatches(
     throw new Error(await res.text());
   }
 
-  const serverPatches = (await res.json()) as AssetsManifest["routes"];
+  let serverPatches = (await res.json()) as AssetsManifest["routes"];
 
   // Patch routes we don't know about yet into the manifest
-  const knownRoutes = new Set(Object.keys(manifest.routes));
-  const patches = Object.values(serverPatches).reduce((acc, route) => {
+  let knownRoutes = new Set(Object.keys(manifest.routes));
+  let patches = Object.values(serverPatches).reduce((acc, route) => {
     if (route && !knownRoutes.has(route.id)) {
       acc[route.id] = route;
     }
@@ -247,7 +248,7 @@ export async function fetchAndApplyManifestPatches(
 
   // Identify all parentIds for which we have new children to add and patch
   // in their new children
-  const parentIds = new Set<string | undefined>();
+  let parentIds = new Set<string | undefined>();
   Object.values(patches).forEach((patch) => {
     if (patch && (!patch.parentId || !patches[patch.parentId])) {
       parentIds.add(patch.parentId);
@@ -263,10 +264,8 @@ export async function fetchAndApplyManifestPatches(
 
 function addToFifoQueue(path: string, queue: Set<string>) {
   if (queue.size >= discoveredPathsMaxSize) {
-    const first = queue.values().next().value;
-    if (first) {
-      queue.delete(first);
-    }
+    let first = queue.values().next().value;
+    queue.delete(first);
   }
   queue.add(path);
 }

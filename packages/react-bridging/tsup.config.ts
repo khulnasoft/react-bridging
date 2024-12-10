@@ -20,7 +20,7 @@ const config = (enableDevWarnings: boolean) =>
       },
       define: {
         "import.meta.hot": "undefined",
-        REACT_BRIDING_VERSION: JSON.stringify(pkg.version),
+        REACT_BRIDGING_VERSION: JSON.stringify(pkg.version),
         __DEV__: JSON.stringify(enableDevWarnings),
       },
     },
@@ -34,7 +34,7 @@ const config = (enableDevWarnings: boolean) =>
         js: createBanner(pkg.name, pkg.version),
       },
       define: {
-        REACT_BRIDING_VERSION: JSON.stringify(pkg.version),
+        REACT_BRIDGING_VERSION: JSON.stringify(pkg.version),
         __DEV__: JSON.stringify(enableDevWarnings),
       },
     },

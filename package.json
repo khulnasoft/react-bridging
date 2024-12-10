@@ -86,7 +86,6 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "next",
-    "esm": "^3.2.25",
     "fs-extra": "^10.1.0",
     "history": "^5.3.0",
     "isbot": "^5.1.11",
@@ -105,7 +104,7 @@
     "tslib": "^2.6.2",
     "type-fest": "^2.19.0",
     "typedoc": "^0.26.11",
-    "typescript": "^5.1.6",
+    "typescript": "^5.4.5",
     "undici": "^6.10.1",
     "unified": "^10.1.2",
     "unist-util-remove": "^3.1.0",
@@ -115,5 +114,10 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "workerd": "1.20240614.0"
+    }
   }
 }

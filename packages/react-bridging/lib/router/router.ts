@@ -3970,7 +3970,7 @@ function normalizeTo(
 
   // When `to` is not specified we inherit search/hash from the current
   // location, unlike when to="." and we just inherit the path.
-  // See https://github.com/khulnasoft/react-bridging/issues/927
+  // See https://github.com/remix-run/remix/issues/927
   if (to == null) {
     path.search = location.search;
     path.hash = location.hash;

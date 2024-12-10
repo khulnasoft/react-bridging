@@ -84,7 +84,7 @@ export async function loadPluginContext({
   root?: string;
 }) {
   if (!root) {
-    root = process.env.REACT_BRIDING_ROOT || process.cwd();
+    root = process.env.REACT_BRIDGING_ROOT || process.cwd();
   }
 
   configFile =
@@ -752,7 +752,7 @@ export const reactBridgingVitePlugin: ReactBridgingVitePlugin = () => {
 
         rootDirectory =
           viteUserConfig.root ??
-          process.env.REACT_BRIDING_ROOT ??
+          process.env.REACT_BRIDGING_ROOT ??
           process.cwd();
 
         if (viteCommand === "serve") {

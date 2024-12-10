@@ -134,7 +134,7 @@ describe("ssr", () => {
     "https://remix.run/blog",
     "//remix.run/blog",
     "app://whatever",
-    "mailto:hello@khulnasoft.com",
+    "mailto:hello@remix.run",
     "web+remix:whatever",
   ];
 

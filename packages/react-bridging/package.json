@@ -1,6 +1,6 @@
 {
   "name": "react-bridging",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "description": "Declarative routing for React",
   "keywords": [
     "react",
@@ -16,7 +16,7 @@
     "directory": "packages/react-bridging"
   },
   "license": "MIT",
-  "author": "KhulnaSoft <hello@khulnasoft.com>",
+  "author": "Remix Software <hello@remix.run>",
   "sideEffects": false,
   "types": "./dist/development/index.d.ts",
   "main": "./dist/development/index.js",

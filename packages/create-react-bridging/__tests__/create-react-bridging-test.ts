@@ -497,7 +497,7 @@ describe("create-react-bridging CLI", () => {
     let projectDir = getProjectDir("npm-install-default");
 
     let execa = require("execa");
-    execa.mockImplementation(async () => {});
+    execa.mockImplementation(async () => { });
 
     // Suppress terminal output
     let stdoutMock = jest
@@ -531,7 +531,7 @@ describe("create-react-bridging CLI", () => {
     let projectDir = getProjectDir("npm-install-on-unknown-package-manager");
 
     let execa = require("execa");
-    execa.mockImplementation(async () => {});
+    execa.mockImplementation(async () => { });
 
     // Suppress terminal output
     let stdoutMock = jest
@@ -565,7 +565,7 @@ describe("create-react-bridging CLI", () => {
     let projectDir = getProjectDir("npm-install-from-user-agent");
 
     let execa = require("execa");
-    execa.mockImplementation(async () => {});
+    execa.mockImplementation(async () => { });
 
     // Suppress terminal output
     let stdoutMock = jest
@@ -598,7 +598,7 @@ describe("create-react-bridging CLI", () => {
     let projectDir = getProjectDir("yarn-create-from-user-agent");
 
     let execa = require("execa");
-    execa.mockImplementation(async () => {});
+    execa.mockImplementation(async () => { });
 
     // Suppress terminal output
     let stdoutMock = jest
@@ -631,7 +631,7 @@ describe("create-react-bridging CLI", () => {
     let projectDir = getProjectDir("pnpm-create-from-user-agent");
 
     let execa = require("execa");
-    execa.mockImplementation(async () => {});
+    execa.mockImplementation(async () => { });
 
     // Suppress terminal output
     let stdoutMock = jest
@@ -664,7 +664,7 @@ describe("create-react-bridging CLI", () => {
     let projectDir = getProjectDir("bun-create-from-user-agent");
 
     let execa = require("execa");
-    execa.mockImplementation(async () => {});
+    execa.mockImplementation(async () => { });
 
     // Suppress terminal output
     let stdoutMock = jest
@@ -697,7 +697,7 @@ describe("create-react-bridging CLI", () => {
     let projectDir = getProjectDir("pnpm-create-override");
 
     let execa = require("execa");
-    execa.mockImplementation(async () => {});
+    execa.mockImplementation(async () => { });
 
     // Suppress terminal output
     let stdoutMock = jest

@@ -118,7 +118,7 @@ function isHtmlLinkDescriptor(object: any): object is HtmlLinkDescriptor {
   }
 
   // <link> may not have an href if <link rel="preload"> is used with imageSrcSet + imageSizes
-  // https://github.com/khulnasoft/react-bridging/issues/184
+  // https://github.com/remix-run/remix/issues/184
   // https://html.spec.whatwg.org/commit-snapshots/cb4f5ff75de5f4cbd7013c4abad02f21c77d4d1c/#attr-link-imagesrcset
   if (object.href == null) {
     return (

@@ -529,7 +529,7 @@ export async function createConfigLoader({
   watch: boolean;
   rootDirectory?: string;
 }): Promise<ConfigLoader> {
-  root = root ?? process.env.REACT_BRIDING_ROOT ?? process.cwd();
+  root = root ?? process.env.REACT_BRIDGING_ROOT ?? process.cwd();
 
   let viteNodeContext = await ViteNode.createContext({
     root,
@@ -584,12 +584,7 @@ export async function createConfigLoader({
 
         fsWatcher.on("all", async (...args: ChokidarEmitArgs) => {
           let [event, rawFilepath] = args;
-          // Ensure filepath is a string by checking args[1] type
-          let filepath = path.normalize(
-            typeof rawFilepath === "string"
-              ? rawFilepath
-              : rawFilepath.toString()
-          );
+          let filepath = path.normalize(rawFilepath);
 
           let appFileAddedOrRemoved =
             appDirectory &&

@@ -670,20 +670,20 @@ React Bridging projects are created from templates. A template can be:
 - a file path to a directory of files
 - a file path to a tarball
 ${[
-  "khulnasoft/react-bridging/templates/basic",
-  "khulnasoft/react-bridging/examples/basic",
-  ":username/:repo",
-  ":username/:repo/:directory",
-  "https://github.com/:username/:repo",
-  "https://github.com/:username/:repo/tree/:branch",
-  "https://github.com/:username/:repo/tree/:branch/:directory",
-  "https://github.com/:username/:repo/archive/refs/tags/:tag.tar.gz",
-  "https://example.com/template.tar.gz",
-  "./path/to/template",
-  "./path/to/template.tar.gz",
-].reduce((str, example) => {
-  return `${str}\n${color.dim("$")} ${color.greenBright("create-react-bridging")} my-app ${color.arg(`--template ${example}`)}`;
-}, "")}
+      "khulnasoft/react-bridging/templates/basic",
+      "khulnasoft/react-bridging/examples/basic",
+      ":username/:repo",
+      ":username/:repo/:directory",
+      "https://github.com/:username/:repo",
+      "https://github.com/:username/:repo/tree/:branch",
+      "https://github.com/:username/:repo/tree/:branch/:directory",
+      "https://github.com/:username/:repo/archive/refs/tags/:tag.tar.gz",
+      "https://example.com/template.tar.gz",
+      "./path/to/template",
+      "./path/to/template.tar.gz",
+    ].reduce((str, example) => {
+      return `${str}\n${color.dim("$")} ${color.greenBright("create-react-bridging")} my-app ${color.arg(`--template ${example}`)}`;
+    }, "")}
 
 To create a new project from a template in a private GitHub repo,
 pass the \`token\` flag with a personal access token with access

@@ -304,7 +304,7 @@ async function handleSingleFetchRequest(
 
   // We use a less-descriptive `text/x-script` here instead of something like
   // `text/x-turbo` to enable compression when deployed via Cloudflare.  See:
-  //  - https://github.com/khulnasoft/react-bridging/issues/9884
+  //  - https://github.com/remix-run/remix/issues/9884
   //  - https://developers.cloudflare.com/speed/optimization/content/brotli/content-compression/
   resultHeaders.set("Content-Type", "text/x-script");
 

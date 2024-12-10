@@ -17,6 +17,7 @@
 
     "outDir": "dist",
     "rootDir": ".",
+    "noEmit": true,
     "resolveJsonModule": true,
     "paths": {
       "react-bridging": ["./index.ts"]

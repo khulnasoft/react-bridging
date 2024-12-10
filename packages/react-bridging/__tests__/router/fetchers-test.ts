@@ -2505,7 +2505,7 @@ describe("fetchers", () => {
     });
 
     // This is another example of the above bug where cancelled fetchers were not
-    // cleaned up correctly (https://github.com/khulnasoft/react-bridging/issues/8298).
+    // cleaned up correctly (https://github.com/remix-run/remix/issues/8298).
     // It was also fixed by https://github.com/khulnasoft/react-bridging/pull/11839
     it("Remix Github Issue 8298", async () => {
       let loaderCount = 0;

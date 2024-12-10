@@ -25,7 +25,7 @@ let messages = [
     },
     to: {
       name: "Logan McAnsh",
-      email: "logan@khulnasoft.com",
+      email: "logan@remix.run",
     },
     subject: "[GitHub] A personal access token has been added to your account",
     body: "Hey mcansh!\n\nA personal access token.....................",
@@ -39,7 +39,7 @@ let messages = [
     },
     to: {
       name: "Logan McAnsh",
-      email: "logan@khulnasoft.com",
+      email: "logan@remix.run",
     },
     subject: "Remix Goes Open Source, Raises Seed Funding",
     body: "Thanks for following our journey as we built Remix",
@@ -53,7 +53,7 @@ let messages = [
     },
     to: {
       name: "Logan McAnsh",
-      email: "logan@khulnasoft.com",
+      email: "logan@remix.run",
     },
     subject: "[GitHub] Payment Receipt for mcansh",
     body: "We received payment for your GitHub.com subscription. Thanks for your business!",

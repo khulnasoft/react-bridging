@@ -19,7 +19,7 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ORG_REPO_TOKEN }}
+          token: ${{ secrets.FORMAT_PAT }}
 
       - name: 📦 Setup pnpm
         uses: pnpm/action-setup@v4
@@ -41,8 +41,8 @@ jobs:
 
       - name: 💪 Commit
         run: |
-          git config --local user.email "hello@khulnasoft.com"
-          git config --local user.name "KhulnaSoft Bot"
+          git config --local user.email "hello@remix.run"
+          git config --local user.name "Remix Run Bot"
 
           git add .
           if [ -z "$(git status --porcelain)" ]; then

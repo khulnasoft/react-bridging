@@ -330,17 +330,17 @@ export function shouldRevalidate(
 Next: [Rendering Strategies](./rendering)
 
 [fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-[loader-params]: https://api.reactbridging.com/v1/interfaces/react_bridging.LoaderFunctionArgs
-[client-loader-params]: https://api.reactbridging.com/v1/types/react_bridging.ClientLoaderFunctionArgs
-[action-params]: https://api.reactbridging.com/v1/interfaces/react_bridging.ActionFunctionArgs
-[client-action-params]: https://api.reactbridging.com/v1/types/react_bridging.ClientActionFunctionArgs
+[loader-params]: https://api.reactbridging.khulnasoft.com/v7/interfaces/react_bridging.LoaderFunctionArgs
+[client-loader-params]: https://api.reactbridging.khulnasoft.com/v7/types/react_bridging.ClientLoaderFunctionArgs
+[action-params]: https://api.reactbridging.khulnasoft.com/v7/interfaces/react_bridging.ActionFunctionArgs
+[client-action-params]: https://api.reactbridging.khulnasoft.com/v7/types/react_bridging.ClientActionFunctionArgs
 [error-boundaries]: https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary
-[use-route-error]: https://api.reactbridging.com/v1/functions/react_bridging.useRouteError
-[is-route-error-response]: https://api.reactbridging.com/v1/functions/react_bridging.isRouteErrorResponse
+[use-route-error]: https://api.reactbridging.khulnasoft.com/v7/functions/react_bridging.useRouteError
+[is-route-error-response]: https://api.reactbridging.khulnasoft.com/v7/functions/react_bridging.isRouteErrorResponse
 [cache-control-header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
 [headers]: https://developer.mozilla.org/en-US/docs/Web/API/Response
-[use-matches]: https://api.reactbridging.com/v1/functions/react_bridging.useMatches
+[use-matches]: https://api.reactbridging.khulnasoft.com/v7/functions/react_bridging.useMatches
 [link-element]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
 [meta-element]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-[meta-params]: https://api.reactbridging.com/v1/interfaces/react_bridging.MetaArgs
-[use-revalidator]: https://api.reactbridging.com/v1/functions/react_bridging.useRevalidator.html
+[meta-params]: https://api.reactbridging.khulnasoft.com/v7/interfaces/react_bridging.MetaArgs
+[use-revalidator]: https://api.reactbridging.khulnasoft.com/v7/functions/react_bridging.useRevalidator.html
