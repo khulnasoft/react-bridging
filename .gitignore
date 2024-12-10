@@ -1,0 +1,35 @@
+.DS_Store
+npm-debug.log
+
+/docs/api/
+/website/build/
+node_modules/
+
+/examples/*/yarn.lock
+/examples/*/pnpm-lock.yaml
+/examples/*/dist
+/tutorial/dist
+/playground-local/
+/integration/playwright-report
+
+# v5 build files
+/packages/*/cjs/
+/packages/*/esm/
+/packages/*/umd/
+
+# v6 build files
+/build/
+/packages/*/dist/
+/packages/*/LICENSE.md
+
+# v7 build files
+.react-bridging
+
+.wireit
+.eslintcache
+.tmp
+/.env
+/NOTES.md
+
+# v7 reference docs
+/public

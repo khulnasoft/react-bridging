@@ -1,0 +1,12 @@
+/fixtures/
+node_modules/
+pnpm-lock.yaml
+/docs/api
+examples/**/dist/
+/playground/
+/playground-local/
+packages/**/dist/
+packages/react-bridging-dom/server.d.ts
+packages/react-bridging-dom/server.js
+packages/react-bridging-dom/server.mjs
+tutorial/dist/

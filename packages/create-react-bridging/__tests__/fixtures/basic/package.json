@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "react-bridging dev",
+    "build": "react-bridging build",
+    "start": "react-bridging-serve ./build/server/index.js"
+  },
+  "dependencies": {
+    "react-bridging": "*",
+    "react-bridging-dom": "*",
+    "@react-bridging/node": "*",
+    "not-react-bridging": "*"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
