@@ -1,6 +1,6 @@
 {
   "name": "@react-bridging/fs-routes",
-  "version": "7.0.2",
+  "version": "0.1.0",
   "description": "File system routing conventions for React Bridging, for use within routes.ts",
   "bugs": {
     "url": "https://github.com/khulnasoft/react-bridging/issues"

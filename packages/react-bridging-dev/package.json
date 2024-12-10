@@ -1,6 +1,6 @@
 {
   "name": "@react-bridging/dev",
-  "version": "7.0.2",
+  "version": "0.1.0",
   "description": "Dev tools and CLI for React Bridging",
   "homepage": "https://reactbridging.com",
   "bugs": {

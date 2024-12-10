@@ -1,6 +1,6 @@
 {
   "name": "@react-bridging/serve",
-  "version": "7.0.2",
+  "version": "0.1.0",
   "description": "Production application server for React Bridging",
   "bugs": {
     "url": "https://github.com/khulnasoft/react-bridging/issues"

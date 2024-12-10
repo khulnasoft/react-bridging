@@ -1,6 +1,6 @@
 {
   "name": "@react-bridging/express",
-  "version": "7.0.2",
+  "version": "0.1.0",
   "description": "Express server request handler for React Bridging",
   "bugs": {
     "url": "https://github.com/khulnasoft/react-bridging/issues"
