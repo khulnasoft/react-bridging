@@ -65,7 +65,7 @@ export const shouldUseAscii = () => !unicode.enabled;
 
 export function isInteractive() {
   // Support explicit override for testing purposes
-  if ("CREATE_REACT_BRIDING_FORCE_INTERACTIVE" in process.env) {
+  if ("CREATE_REACT_BRIDGING_FORCE_INTERACTIVE" in process.env) {
     return true;
   }
 
