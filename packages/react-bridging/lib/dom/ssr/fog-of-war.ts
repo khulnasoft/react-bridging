@@ -52,7 +52,7 @@ export function getPartialManifest(
 
   paths.forEach((path) => {
     const matches = matchRoutes(router.routes, path, router.basename);
-    if (matches) {
+    if (matches && matches.length > 0) {
       matches.forEach((m) => routeIds.add(m.route.id));
     }
   });
