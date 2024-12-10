@@ -28,7 +28,7 @@ describe("navigate with params", () => {
         let navigate = useNavigate();
 
         React.useEffect(() => {
-          navigate("/blog/react router");
+          navigate("/blog/react bridging");
         });
 
         return null;
@@ -51,7 +51,7 @@ describe("navigate with params", () => {
       });
 
       expect(window.location.pathname).toEqual("/blog/react%20router");
-      expect(node.innerHTML).toMatch(/react router/);
+      expect(node.innerHTML).toMatch(/react bridging/);
     });
   });
 

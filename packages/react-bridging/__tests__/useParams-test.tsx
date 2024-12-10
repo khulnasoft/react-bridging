@@ -122,7 +122,7 @@ describe("useParams", () => {
 
       expect(renderer.toJSON()).toMatchInlineSnapshot(`
         <pre>
-          {"slug":"react router"}
+          {"slug":"react bridging"}
         </pre>
       `);
     });

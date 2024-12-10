@@ -110,11 +110,11 @@ const isBrowser =
 // to detect and properly classify live websites as being built with React Bridging:
 // https://github.com/HTTPArchive/wappalyzer/blob/main/src/technologies/r.json
 declare global {
-  const REACT_ROUTER_VERSION: string;
+  const REACT_BRIDING_VERSION: string;
 }
 try {
   if (isBrowser) {
-    window.__reactBridgingVersion = REACT_ROUTER_VERSION;
+    window.__reactBridgingVersion = REACT_BRIDING_VERSION;
   }
 } catch (e) {
   // no-op

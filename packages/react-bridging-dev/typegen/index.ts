@@ -2,7 +2,8 @@ import fs from "node:fs";
 
 import * as Path from "pathe";
 import pc from "picocolors";
-import type vite from "vite";
+import type { Logger } from "vite";
+import { createServer } from "vite";
 
 import { createConfigLoader } from "../config/config";
 
@@ -21,7 +22,7 @@ export type Watcher = {
 
 export async function watch(
   rootDirectory: string,
-  { logger }: { logger?: vite.Logger } = {}
+  { logger }: { logger?: Logger } = {}
 ): Promise<Watcher> {
   const ctx = await createContext({ rootDirectory, watch: true });
   await writeAll(ctx);
