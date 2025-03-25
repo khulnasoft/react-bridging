@@ -584,13 +584,18 @@ export async function createConfigLoader({
 
         fsWatcher.on("all", async (...args: ChokidarEmitArgs) => {
           let [event, rawFilepath] = args;
-          let filepath = path.normalize(rawFilepath);
 
+          if (typeof rawFilepath !== "string") {
+            throw new Error(`Invalid filepath: expected a string but got ${typeof rawFilepath}`);
+          }
+          
+          let filepath = path.normalize(rawFilepath);
+          
           let appFileAddedOrRemoved =
             appDirectory &&
             (event === "add" || event === "unlink") &&
             filepath.startsWith(path.normalize(appDirectory));
-
+          
           let configCodeUpdated = Boolean(
             viteNodeContext.devServer?.moduleGraph.getModuleById(filepath)
           );
