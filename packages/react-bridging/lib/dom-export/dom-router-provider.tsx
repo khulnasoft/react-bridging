@@ -14,4 +14,3 @@ export function RouterProvider(props: Omit<RouterProviderProps, "flushSync">) {
     />
   );
 }
-

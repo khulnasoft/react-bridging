@@ -586,16 +586,18 @@ export async function createConfigLoader({
           let [event, rawFilepath] = args;
 
           if (typeof rawFilepath !== "string") {
-            throw new Error(`Invalid filepath: expected a string but got ${typeof rawFilepath}`);
+            throw new Error(
+              `Invalid filepath: expected a string but got ${typeof rawFilepath}`
+            );
           }
-          
+
           let filepath = path.normalize(rawFilepath);
-          
+
           let appFileAddedOrRemoved =
             appDirectory &&
             (event === "add" || event === "unlink") &&
             filepath.startsWith(path.normalize(appDirectory));
-          
+
           let configCodeUpdated = Boolean(
             viteNodeContext.devServer?.moduleGraph.getModuleById(filepath)
           );
