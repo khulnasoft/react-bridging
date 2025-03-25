@@ -264,7 +264,7 @@ export async function fetchAndApplyManifestPatches(
 
 function addToFifoQueue(path: string, queue: Set<string>) {
   if (queue.size >= discoveredPathsMaxSize) {
-    let first = queue.values().next().value;
+    const first = [...queue][0]; // Get the first element safely
     queue.delete(first);
   }
   queue.add(path);
