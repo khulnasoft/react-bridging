@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 import * as Path from "pathe";
 import pc from "picocolors";
-import type vite from "vite";
+import type * as vite from "vite"; // Import all exports as an object
 
 import { createConfigLoader } from "../config/config";
 

@@ -7,5 +7,10 @@ import { RouterProvider as BaseRouterProvider } from "react-bridging";
 export type RouterProviderProps = Omit<BaseRouterProviderProps, "flushSync">;
 
 export function RouterProvider(props: Omit<RouterProviderProps, "flushSync">) {
-  return <BaseRouterProvider flushSync={ReactDOM.flushSync} {...props} />;
+  return (
+    <BaseRouterProvider
+      flushSync={ReactDOM.flushSync as (fn: () => unknown) => undefined}
+      {...props}
+    />
+  );
 }
