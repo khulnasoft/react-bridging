@@ -1,6 +1,8 @@
 MIT License
 
-Copyright (c) KhulnaSoft Ltd. 2020-2021
+Copyright (c) React Training LLC 2015-2019
+Copyright (c) KhulnaSoft, Ltd. 2020-2021
+Copyright (c) Shopify Inc. 2022-2023
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

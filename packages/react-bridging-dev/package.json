@@ -1,8 +1,8 @@
 {
   "name": "@react-bridging/dev",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "description": "Dev tools and CLI for React Bridging",
-  "homepage": "https://reactbridging.com",
+  "homepage": "https://reactbridging.khulnasoft.com",
   "bugs": {
     "url": "https://github.com/khulnasoft/react-bridging/issues"
   },

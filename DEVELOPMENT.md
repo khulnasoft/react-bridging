@@ -57,7 +57,8 @@ You may need to make changes to a pre-release prior to publishing a final stable
 - Commit the edited pre-release file along with any unpublished changesets, and push the `release-next` branch to GitHub
 - Wait for the release workflow to finish - the Changesets action in the workflow will open a PR that will increment all versions and generate the changelogs for the stable release
 - Review the updated `CHANGELOG` files in the PR and make any adjustments necessary
-  - `find packages -name 'CHANGELOG.md' -mindepth 2 -maxdepth 2 -exec code {} \;`
+  - `
+  `
   - Our automated release process should have removed prerelease entries
 - Finalize the release notes
   - This should already be in pretty good shape in the root `CHANGELOG.md` file in the repo because changes have been added with each prerelease

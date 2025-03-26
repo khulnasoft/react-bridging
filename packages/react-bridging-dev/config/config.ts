@@ -529,7 +529,7 @@ export async function createConfigLoader({
   watch: boolean;
   rootDirectory?: string;
 }): Promise<ConfigLoader> {
-  root = root ?? process.env.REACT_ROUTER_ROOT ?? process.cwd();
+  root = root ?? process.env.REACT_BRIDGING_ROOT ?? process.cwd();
 
   let viteNodeContext = await ViteNode.createContext({
     root,

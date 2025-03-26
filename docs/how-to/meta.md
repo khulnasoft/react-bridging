@@ -18,7 +18,7 @@ export function meta() {
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "React Bridging",
-        url: "https://reactbridging.com",
+        url: "https://reactbridging.khulnasoft.com",
       },
     },
   ];
@@ -33,7 +33,7 @@ export function meta() {
     {
       tagName: "link",
       rel: "canonical",
-      href: "https://reactbridging.com",
+      href: "https://reactbridging.khulnasoft.com",
     },
   ];
 }

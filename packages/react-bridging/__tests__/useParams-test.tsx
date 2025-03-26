@@ -112,7 +112,7 @@ describe("useParams", () => {
       let renderer: TestRenderer.ReactTestRenderer;
       TestRenderer.act(() => {
         renderer = TestRenderer.create(
-          <MemoryRouter initialEntries={["/blog/react%20router"]}>
+          <MemoryRouter initialEntries={["/blog/react%20bridging"]}>
             <Routes>
               <Route path="/blog/:slug" element={<ShowParams />} />
             </Routes>
@@ -122,7 +122,7 @@ describe("useParams", () => {
 
       expect(renderer.toJSON()).toMatchInlineSnapshot(`
         <pre>
-          {"slug":"react router"}
+          {"slug":"react bridging"}
         </pre>
       `);
     });
@@ -133,7 +133,7 @@ describe("useParams", () => {
       let renderer: TestRenderer.ReactTestRenderer;
       TestRenderer.act(() => {
         renderer = TestRenderer.create(
-          <MemoryRouter initialEntries={["/blog/react+router+is%20awesome"]}>
+          <MemoryRouter initialEntries={["/blog/react+bridging+is%20awesome"]}>
             <Routes>
               <Route path="/blog/:slug" element={<ShowParams />} />
             </Routes>
@@ -143,7 +143,7 @@ describe("useParams", () => {
 
       expect(renderer.toJSON()).toMatchInlineSnapshot(`
         <pre>
-          {"slug":"react+router+is awesome"}
+          {"slug":"react+bridging+is awesome"}
         </pre>
       `);
     });
@@ -156,7 +156,7 @@ describe("useParams", () => {
     >;
 
     beforeEach(() => {
-      consoleWarn = jest.spyOn(console, "warn").mockImplementation(() => {});
+      consoleWarn = jest.spyOn(console, "warn").mockImplementation(() => { });
     });
 
     afterEach(() => {
