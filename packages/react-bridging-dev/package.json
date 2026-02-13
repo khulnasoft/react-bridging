@@ -84,7 +84,7 @@
     "react-refresh": "^0.14.0",
     "semver": "^7.3.7",
     "set-cookie-parser": "^2.6.0",
-    "valibot": "^0.41.0",
+    "valibot": "^1.2.0",
     "vite-node": "^1.6.0"
   },
   "devDependencies": {
