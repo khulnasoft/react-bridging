@@ -79,7 +79,7 @@
     "lodash": "^4.17.21",
     "pathe": "^1.1.2",
     "picocolors": "^1.1.1",
-    "picomatch": "^2.3.1",
+    "picomatch": "^2.3.2",
     "prettier": "^2.7.1",
     "react-refresh": "^0.14.0",
     "semver": "^7.3.7",
